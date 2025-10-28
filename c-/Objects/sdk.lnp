@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\gpio.o"
+".\objects\leds.o"
+".\objects\ext_in.o"
+".\objects\i2c.o"
+".\objects\ssdlet.o"
+".\objects\fonts.o"
+".\objects\delay.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\sdk.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\sdk.map" -o .\Objects\sdk.axf
